@@ -2,8 +2,12 @@
 
 ## Links
 
-Repository:
+Repository: https://github.com/Erazerlista/Password-Generator
 Website:
+
+##
+
+References: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 
 ## Your Task
 
