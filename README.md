@@ -7,7 +7,16 @@ Website:
 
 ##
 
-References: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+References:
+
+1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+2. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+3. https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt
+4. https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm
+5. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+6. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+7. https://www.tutorialstonight.com/password-generator-in-javascript
+8. https://www.youtube.com/watch?v=x4HUaiazDes
 
 ## Your Task
 
