@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   // Prompt the user for password criteria
-  var passwordLength = parseInt(prompt("How many characters do you want for your password?"));
+  var passwordLength = parseInt(prompt("How many characters do you want for your password? This must include 8-128 characters."));
   var includeLowercase = confirm("Include lowercase letters?");
   var includeUppercase = confirm("Include uppercase letters?");
   var includeNumbers = confirm("Include numbers?");
@@ -16,7 +16,7 @@ function generatePassword() {
     passwordLength > 128 ||
     (!includeLowercase && !includeUppercase && !includeNumbers && !includeSymbols)
   ) {
-    alert("Please enter valid password criteria!");
+    alert("Please enter valid password criteria! The length of the passord must be 8-128 in length!");
     return "";
   }
 
