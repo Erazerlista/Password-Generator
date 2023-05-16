@@ -1,53 +1,48 @@
-// Assignment Code generates button
+// Assignment code here
 var generateBtn = document.querySelector("#generate");
 
-//no value after creation. return password.
-function generatePassword(){
-  console.log("After button click");
+function generatePassword() {
+  // Prompt the user for password criteria
+  var passwordLength = parseInt(prompt("How many characters do you want for your password?"));
+  var includeLowercase = confirm("Include lowercase letters?");
+  var includeUppercase = confirm("Include uppercase letters?");
+  var includeNumbers = confirm("Include numbers?");
+  var includeSymbols = confirm("Include symbols?");
 
-//1. psuedo code. WHEN I click the button to generate a password
-//THEN I am presented with a series of prompts for password criteria
-//Password Lendth 8-128 characters. Lowercase, uppercase, numbers, special characters.
-//imput validation tthen display the password. 
+  // Validate the input
+  if (
+    isNaN(passwordLength) ||
+    passwordLength < 8 ||
+    passwordLength > 128 ||
+    (!includeLowercase && !includeUppercase && !includeNumbers && !includeSymbols)
+  ) {
+    alert("Please enter valid password criteria!");
+    return "";
+  }
 
-  return "Generated Password here";
+  // Define character sets based on criteria
+  var charSets = [];
+  if (includeLowercase) charSets.push("abcdefghijklmnopqrstuvwxyz");
+  if (includeUppercase) charSets.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  if (includeNumbers) charSets.push("0123456789");
+  if (includeSymbols) charSets.push("!@#$%^&*()_+-=//';.,[]{}");
+
+  // Generate password based on criteria
+  var password = "";
+  for (var i = 0; i < passwordLength; i++) {
+    var randomCharSetIndex = Math.floor(Math.random() * charSets.length);
+    var randomCharSet = charSets[randomCharSetIndex];
+    password += randomCharSet[Math.floor(Math.random() * randomCharSet.length)];
+  }
+  return password;
 }
 
-//GIVEN I need a new, secure password
-
-// Write password to the #password input, no function & card
+// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  //displays on screen
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// var cars ={ "EXAMPLE POPUP"
-// make: "Honda",
-// model: "civic",
- // year: 2003,
- // displaylist: function() {
-   // alert("make: " + cars.make);
- // }
-
-//cars.displaylist();
-
-// We use a for-loop to execute code more than once
-//for (var i = 0; i < 5; i++) {
-    // This is the block of code that will run each time
-    //console.log("This is the current value of i: " + i + ".");
-//}
-
-// For-loops are often used to iterate over arrays
-//var zooAnimals = ["Bears", "Giraffes", "Penguins", "Meerkats"];
-
-//To determine how many times the loop should execute, we use the array's length
-////for (var i = 0; i < zooAnimals.length; i++) { 
-   // console.log("I am going to zoo to see " + zooAnimals[i] + ".");
-//}
