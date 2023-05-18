@@ -2,12 +2,12 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  // Prompt the user for password criteria. Screen questions.
-  var passwordLength = parseInt(prompt("How many characters do you want for your password? This must include 8-128 characters."));
-  var includeLowercase = confirm("Include lowercase letters?");
-  var includeUppercase = confirm("Include uppercase letters?");
-  var includeNumbers = confirm("Include numbers?");
-  var includeSymbols = confirm("Include symbols?");
+  // Prompt the user for password criteria. Screen questions. Easy tutorials reference.
+  const passwordLength = parseInt(prompt("How many characters do you want for your password? This must include 8-128 characters."));
+  const includeLowercase = confirm("Include lowercase letters?");
+  const includeUppercase = confirm("Include uppercase letters?");
+  const includeNumbers = confirm("Include numbers?");
+  const includeSymbols = confirm("Include symbols?");
 
   // Validate the input. Password Length. NAN (Not a number).
   if (
@@ -20,7 +20,7 @@ function generatePassword() {
     return "";
   }
 
-  // Define character sets based on criteria. Push characters.
+  // Define character sets based on criteria. Push characters. easy tutorial ref.
   var Arrays = [];
   if (includeLowercase) Arrays.push("abcdefghijklmnopqrstuvwxyz");
   if (includeUppercase) Arrays.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
@@ -28,7 +28,7 @@ function generatePassword() {
   if (includeSymbols) Arrays.push("!@#$%^&*()_+-=//';.,[]{}");
 
   // Generate password based on criteria. Math Random code.
-  var password = "";
+  let password = "";
   for (var i = 0; i < passwordLength; i++) {
     var randomArraySetIndex = Math.floor(Math.random() * Arrays.length);
     var randomArrayset = Arrays[randomArraySetIndex];
