@@ -27,7 +27,7 @@ function generatePassword() {
   if (includeNumbers) Arrays.push("0123456789");
   if (includeSymbols) Arrays.push("!@#$%^&*()_+-=//';.,[]{}");
 
-  // Generate password based on criteria. Math Radom code.
+  // Generate password based on criteria. Math Random code.
   var password = "";
   for (var i = 0; i < passwordLength; i++) {
     var randomCharSetIndex = Math.floor(Math.random() * Arrays.length);
