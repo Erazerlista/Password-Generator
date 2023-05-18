@@ -1,15 +1,15 @@
-// Assignment code here
+// Assignment code here. 
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  // Prompt the user for password criteria
+  // Prompt the user for password criteria. Screen questions.
   var passwordLength = parseInt(prompt("How many characters do you want for your password? This must include 8-128 characters."));
   var includeLowercase = confirm("Include lowercase letters?");
   var includeUppercase = confirm("Include uppercase letters?");
   var includeNumbers = confirm("Include numbers?");
   var includeSymbols = confirm("Include symbols?");
 
-  // Validate the input. Password Length. NAN (Not a number)
+  // Validate the input. Password Length. NAN (Not a number).
   if (
     isNaN(passwordLength) ||
     passwordLength < 8 ||
@@ -20,14 +20,14 @@ function generatePassword() {
     return "";
   }
 
-  // Define character sets based on criteria
+  // Define character sets based on criteria. Push characters.
   var Arrays = [];
   if (includeLowercase) Arrays.push("abcdefghijklmnopqrstuvwxyz");
   if (includeUppercase) Arrays.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
   if (includeNumbers) Arrays.push("0123456789");
   if (includeSymbols) Arrays.push("!@#$%^&*()_+-=//';.,[]{}");
 
-  // Generate password based on criteria
+  // Generate password based on criteria. Math Radom code.
   var password = "";
   for (var i = 0; i < passwordLength; i++) {
     var randomCharSetIndex = Math.floor(Math.random() * Arrays.length);
