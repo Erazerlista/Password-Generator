@@ -21,18 +21,18 @@ function generatePassword() {
   }
 
   // Define character sets based on criteria
-  var charSets = [];
-  if (includeLowercase) charSets.push("abcdefghijklmnopqrstuvwxyz");
-  if (includeUppercase) charSets.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-  if (includeNumbers) charSets.push("0123456789");
-  if (includeSymbols) charSets.push("!@#$%^&*()_+-=//';.,[]{}");
+  var Arrays = [];
+  if (includeLowercase) Arrays.push("abcdefghijklmnopqrstuvwxyz");
+  if (includeUppercase) Arrays.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  if (includeNumbers) Arrays.push("0123456789");
+  if (includeSymbols) Arrays.push("!@#$%^&*()_+-=//';.,[]{}");
 
   // Generate password based on criteria
   var password = "";
   for (var i = 0; i < passwordLength; i++) {
-    var randomCharSetIndex = Math.floor(Math.random() * charSets.length);
-    var randomCharSet = charSets[randomCharSetIndex];
-    password += randomCharSet[Math.floor(Math.random() * randomCharSet.length)];
+    var randomCharSetIndex = Math.floor(Math.random() * Arrays.length);
+    var randomArrayset = Arrays[randomCharSetIndex];
+    password += randomArrayset[Math.floor(Math.random() * randomArrayset.length)];
   }
   return password;
 }
