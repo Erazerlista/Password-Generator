@@ -30,8 +30,8 @@ function generatePassword() {
   // Generate password based on criteria. Math Random code.
   var password = "";
   for (var i = 0; i < passwordLength; i++) {
-    var randomCharSetIndex = Math.floor(Math.random() * Arrays.length);
-    var randomArrayset = Arrays[randomCharSetIndex];
+    var randomArraySetIndex = Math.floor(Math.random() * Arrays.length);
+    var randomArrayset = Arrays[randomArraySetIndex];
     password += randomArrayset[Math.floor(Math.random() * randomArrayset.length)];
   }
   return password;
