@@ -9,14 +9,14 @@ function generatePassword() {
   var includeNumbers = confirm("Include numbers?");
   var includeSymbols = confirm("Include symbols?");
 
-  // Validate the input
+  // Validate the input. Password Length. NAN (Not a number)
   if (
     isNaN(passwordLength) ||
     passwordLength < 8 ||
     passwordLength > 128 ||
     (!includeLowercase && !includeUppercase && !includeNumbers && !includeSymbols)
   ) {
-    alert("Please enter valid password criteria! The length of the passord must be 8-128 in length!");
+    alert("Please enter valid password criteria! The length of the password must be 8-128 in length!");
     return "";
   }
 
@@ -37,7 +37,7 @@ function generatePassword() {
   return password;
 }
 
-// Write password to the #password input
+// Write function password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
