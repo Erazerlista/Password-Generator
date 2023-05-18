@@ -17,6 +17,9 @@ References:
 6. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 7. https://www.tutorialstonight.com/password-generator-in-javascript
 8. https://www.youtube.com/watch?v=x4HUaiazDes
+9. https://www.youtube.com/watch?v=lZkUdFsulFU&t=598s
+10. https://www.youtube.com/watch?v=Xrsb9SiF3a8
+11. https://www.youtube.com/watch?v=fOvYE1i_IiY
 
 ## Your Task
 
